@@ -1,0 +1,165 @@
+:root {
+  --borderColor: #f0f0f0;
+  --backgroundColor: #21325e;
+  --mainDivColor: #3e497a;
+  --writingColor: #f1d00a;
+}
+
+body {
+  margin: 0;
+  background-color: var(--backgroundColor);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.main {
+  border: 8px solid var(--borderColor);
+  border-radius: 20px;
+  background-color: var(--mainDivColor);
+  color: var(--writingColor);
+  width: 61%;
+  height: 90%;
+  margin: 5% 19.5% 5%;
+  padding: 2.5%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 150%;
+}
+
+.streak {
+  font-family: baskerville, "palatino linotype", "times new roman", serif;
+  font-size: 100%;
+}
+
+.itemList {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+
+  display: inline-block;
+  text-align: left;
+}
+
+/* Everything here is just to make the checkbox pretty ========== */
+.checkbox {
+  position: absolute;
+  top: -5px;
+  left: -12px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+.itemLabel:hover input ~ .checkbox {
+  background-color: #bbb;
+}
+
+.itemLabel input:checked ~ .checkbox {
+  background-color: var(--backgroundColor);
+}
+
+.checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.itemLabel input:checked ~ .checkbox:after {
+  display: block;
+}
+
+.itemLabel .checkbox:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.itemLabel input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Until here ========== */
+
+.item {
+  position: relative;
+  margin: 0px 5px 15px;
+}
+
+.itemLabel {
+  color: var(--writingColor);
+  font-family: baskerville, "palatino linotype", "times new roman", serif;
+  font-size: 80%;
+  font-weight: bold;
+  position: relative;
+  padding-left: 25px;
+}
+
+.addButtonContainer {
+  position: relative;
+}
+
+.addButton {
+  text-align: center;
+  background-color: var(--mainDivColor);
+  border: 0;
+  color: var(--borderColor);
+  transition-duration: 0.3s;
+  font-size: 120%;
+
+  position: absolute;
+  top: 8%;
+  left: 310px;
+}
+
+.addButton:hover {
+  color: var(--writingColor);
+}
+
+.deleteButton {
+  margin-left: 30%;
+  text-align: center;
+  background-color: var(--mainDivColor);
+  border: 0;
+  color: var(--borderColor);
+  transition-duration: 0.3s;
+  font-size: 120%;
+  position: absolute;
+  top: -20%;
+}
+
+.deleteButton:hover {
+  color: var(--writingColor);
+}
+
+.input {
+  background-color: var(--mainDivColor);
+  border: 2px solid var(--writingColor);
+  border-radius: 5px;
+  width: 300px;
+  height: 20px;
+  outline: none;
+  color: var(--writingColor);
+  position: relative;
+  left: -3.5%;
+}
+
+.input:focus {
+  background-color: var(--backgroundColor);
+}
