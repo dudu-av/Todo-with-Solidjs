@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&family=Dosis:wght@500&family=Yellowtail&display=swap");
+
 :root {
   --borderColor: #f0f0f0;
   --backgroundColor: #21325e;
@@ -27,14 +29,15 @@ code {
   color: var(--writingColor);
   width: 61%;
   height: 90%;
-  margin: 5% 19.5% 5%;
+  margin: 5% 16% 5%;
   padding: 2.5%;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Arvo", "Times New Roman", Times, serif;
   font-size: 150%;
+  position: relative;
 }
 
 .streak {
-  font-family: baskerville, "palatino linotype", "times new roman", serif;
+  font-family: "Dosis", "palatino linotype", "times new roman", serif;
   font-size: 100%;
 }
 
@@ -50,7 +53,7 @@ code {
 /* Everything here is just to make the checkbox pretty ========== */
 .checkbox {
   position: absolute;
-  top: -5px;
+  top: 0px;
   left: -12px;
   height: 25px;
   width: 25px;
@@ -104,7 +107,7 @@ code {
 
 .itemLabel {
   color: var(--writingColor);
-  font-family: baskerville, "palatino linotype", "times new roman", serif;
+  font-family: "Dosis", "palatino linotype", "times new roman", serif;
   font-size: 80%;
   font-weight: bold;
   position: relative;
@@ -134,6 +137,7 @@ code {
 
 .deleteButton {
   margin-left: 30%;
+  margin-top: 5px;
   text-align: center;
   background-color: var(--mainDivColor);
   border: 0;
